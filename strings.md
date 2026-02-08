@@ -48,3 +48,30 @@ public class Strings {
     }
 }
 ```
+
+
+## Reverse using swapping (without creating a new string
+
+```java
+
+public class Strings {
+
+    public static String reverseUsingSwap (String word){
+        char[] arr = word.toCharArray();
+        int left = 0, right = word.length()-1;
+        while (left < right) {
+            char temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
+        }
+        return new String(arr);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(reverseUsingSwap("Raghav"));
+    }
+}
+
+```
