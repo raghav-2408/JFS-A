@@ -179,5 +179,35 @@ public class Strings {
 }
 ```
 
+## Check Anagram
+
+```java
+
+import java.util.Arrays;
+
+public class Strings {
+
+    public static boolean checkAnagram(String word1, String word2){
+
+        if (word1.length() != word2.length()) 
+            {
+                return false;
+            }
+        
+        char[] s1 = word1.toCharArray();
+        char[] s2 = word2.toCharArray();
+
+        Arrays.sort(s1);
+        Arrays.sort(s2);
+
+        return Arrays.equals(s1, s2);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(checkAnagram("listen", "silent"));
+    }
+}
+
+```
 
 
