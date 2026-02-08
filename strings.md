@@ -163,3 +163,21 @@ public class Strings {
     }
 }
 ```
+
+## Remove Vowels
+
+```java
+public class Strings {
+
+    public static String removeVowels(String word){
+        return word.replaceAll("[aeiouAEIOU]", "");
+    }
+
+    public static void main(String[] args) {
+        System.out.println(removeVowels("Hello"));
+    }
+}
+```
+
+
+
