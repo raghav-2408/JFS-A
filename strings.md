@@ -50,7 +50,7 @@ public class Strings {
 ```
 
 
-## Reverse using swapping (without creating a new string
+## Reverse using swapping (without creating a new string)
 
 ```java
 
@@ -75,3 +75,29 @@ public class Strings {
 }
 
 ```
+
+## Check Palindrome
+
+``java
+public class Strings {
+
+    public static Boolean isPalindrome(String word){
+        int left = 0, right = word.length() - 1;
+
+        while (left < right){
+            if (word.charAt(left) != word.charAt(right)){
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isPalindrome("madam"));
+    }
+}
+```
+
+
