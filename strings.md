@@ -145,3 +145,21 @@ public class Strings {
 }
 
 ```
+
+## Count Words in a Sentence
+
+```java
+public class Strings {
+
+    public static int countwWords(String word){
+        if (word.trim().isEmpty()){
+            return 0;
+        }
+        return word.trim().split("\\s+").length;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(countwWords("there are 4 words"));
+    }
+}
+```
