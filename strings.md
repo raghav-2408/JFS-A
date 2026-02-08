@@ -30,3 +30,21 @@ public class Strings {
     }
 }
 ```
+
+## Reverse string using a temp variable (simple loop)
+
+```java
+public class Strings {
+
+    public static String reverseString(String word){
+        String temp = "";
+        for (int i = word.length() - 1; i >= 0; i--){
+            temp = temp + word.charAt(i);
+        }
+        return temp;
+    }
+    public static void main(String[] args) {
+        System.out.println(Strings.reverseString("Hello"));
+    }
+}
+```
