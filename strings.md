@@ -78,7 +78,7 @@ public class Strings {
 
 ## Check Palindrome
 
-``java
+```java
 public class Strings {
 
     public static Boolean isPalindrome(String word){
@@ -100,4 +100,48 @@ public class Strings {
 }
 ```
 
+## Count Vowels
 
+```
+Initial values
+
+word = "Hello"
+vowels = "aeiouAEIOU"
+
+Loop through each character:
+i = 0
+
+word.charAt(0) = 'H'
+vowels.indexOf('H') → -1 (not found)
+if (-1 != -1) → false → continue
+
+i = 1
+
+word.charAt(1) = 'e'
+vowels.indexOf('e') → 1 (found at index 1)
+if (1 != -1) → true
+return true;  ⟶ Method stops here and returns true
+```
+
+```java
+
+public class Strings {
+
+    public static int countVowels(String word){
+        int count = 0;
+        String vowels = "aeiouAEIOU";
+        for(int i = 0; i < word.length(); i++){
+            if (vowels.indexOf(word.charAt(i)) != -1){
+                count+=1;
+            }
+        }
+        
+        return count;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(countVowels("madam"));
+    }
+}
+
+```
