@@ -271,3 +271,25 @@ public class Arrays {
     }
 }
 ```
+
+
+## Reverse each word of a sentence
+
+```java
+import java.util.Scanner;
+
+public class WarmUP {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+
+        String[] tempStr = str.split(" ");
+
+        for(String i : tempStr){
+            String result = new StringBuilder(i).reverse().toString();
+            System.out.print(result + " ");
+        }
+    }
+}
+```
