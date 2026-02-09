@@ -210,4 +210,29 @@ public class Strings {
 
 ```
 
+## Reverse each word of a sentence
+
+```java
+import java.util.*;
+public class Strings {
+
+    public static void main(String[] args) {
+        ArrayList<String> s = new ArrayList<String>();
+
+        Scanner sc = new Scanner(System.in);
+
+        String stInput = sc.nextLine();
+
+        s.add(stInput);
+
+        for(String i : s){
+            String[] word = i.split(" ");
+            for(String j : word){
+                String reversedString = new StringBuilder(j).reverse().toString();
+                System.out.print(reversedString + " ");
+            }
+        }
+    }
+}
+```
 
