@@ -112,7 +112,6 @@ public class Q_Eleven {
 ## Swap and Reverse
 
 ```java
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -148,13 +147,10 @@ public class UserInterface {
             clean[N-i-1] = temp.toString();
         }
 
-        StringBuilder result = new StringBuilder();
-        result.append(Arrays.toString(clean));
-
-        
         String output = String.join(" ", clean);
-        System.out.println(output);
+        System.out.print(output);
 
     }
 }
+
 ```
