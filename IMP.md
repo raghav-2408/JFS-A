@@ -107,3 +107,54 @@ public class Q_Eleven {
 }
 
 ```
+
+
+## Swap and Reverse
+
+```java
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class UserInterface {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the sentence");
+        String sentence = sc.nextLine();
+
+        String[] parts = sentence.trim().split("\\s+");
+
+        if (parts.length <= 2){
+            System.out.println("Invalid Length");
+            return;
+        }
+
+        if(!sentence.matches("[a-zA-Z ]+")){
+            System.out.println(sentence + " is an invalid sentence");
+            return;
+        }
+
+        int N = parts.length;
+
+        String[] clean = new String[N];
+
+        clean[0] = parts[N-1];
+        clean[N-1] = parts[0];
+
+        for (int i = 1; i < N-1; i++){
+            StringBuilder temp = new StringBuilder();
+            temp.append(parts[i]).reverse();
+            clean[N-i-1] = temp.toString();
+        }
+
+        StringBuilder result = new StringBuilder();
+        result.append(Arrays.toString(clean));
+
+        
+        String output = String.join(" ", clean);
+        System.out.println(output);
+
+    }
+}
+```
