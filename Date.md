@@ -51,3 +51,52 @@ public class UserInterface {
 }
 
 ```
+
+## Calculate Expiry Date
+
+```java
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Scanner;
+
+public class UserInterface {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the Manufacturing Date");
+		String manufDate = sc.nextLine();
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		sdf.setLenient(false);
+		
+		Date date = null;
+		
+		try {
+			date = sdf.parse(manufDate);
+		}catch(ParseException e) {
+			System.out.println(manufDate + " is not a valid date");
+			return;
+		}
+		
+		System.out.println("Enter the Month");
+		int month = sc.nextInt();
+		
+		Calendar c = Calendar.getInstance();
+		
+		c.setTime(date);
+		
+		c.add(Calendar.MONTH, month);
+		
+		Date dd = c.getTime();
+		
+		String result = sdf.format(dd);
+		
+		System.out.println(result + " is the expiry date");
+		
+	}
+
+}
+```
