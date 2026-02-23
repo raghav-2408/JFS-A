@@ -154,3 +154,32 @@ public class UserInterface {
 }
 
 ```
+
+## Swap and Reverse (Easy Way)
+
+``` java
+public class Strings {
+
+  public static void main(String[] args) {
+    String sent = "This is a Sentence";
+
+    String[] parts = sent.split(" ");
+
+    
+    StringBuilder sb = new StringBuilder(sent);
+
+    
+    String res = "";
+    
+    for (String s : parts) {
+      StringBuilder word = new StringBuilder(s);
+      String reversedWord = word.reverse().toString();
+      res += reversedWord;
+      res += " ";
+    }
+    System.out.println(sent);
+    System.out.println(sb.reverse().toString());
+    System.out.println(res);
+  }
+}
+```
