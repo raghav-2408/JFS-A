@@ -24,3 +24,8 @@ public class Q2 {
     }
 }
 ```
+
+```
+Read chars
+char blockName = sc.next().charAt(0);
+```
