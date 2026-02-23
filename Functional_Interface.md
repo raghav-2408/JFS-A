@@ -1,3 +1,17 @@
+## EmployeeAudit 
+
+```java
+import java.util.ArrayList;
+
+@FunctionalInterface
+public interface EmployeeAudit {
+
+	public ArrayList<String> fetchEmployeeDetails (double salary);
+	
+}
+```
+
+
 ## UserInterface
 ```java
 import java.util.ArrayList;
@@ -92,15 +106,3 @@ public class UserInterface {
 }
 ```
 
-## EmployeeAudit 
-
-```java
-import java.util.ArrayList;
-
-@FunctionalInterface
-public interface EmployeeAudit {
-
-	public ArrayList<String> fetchEmployeeDetails (double salary);
-	
-}
-```
