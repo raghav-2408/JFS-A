@@ -92,3 +92,17 @@ public class CartonUtility {
 	}
 }
 ```
+
+# Find max
+```java
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(9);
+        arr.add(1);
+        arr.add(8);
+
+        int maxx = arr.stream()
+            .mapToInt(N -> N.intValue())
+            .max()
+            .orElseThrow(() -> new NoSuchElementException("no"));
+        System.out.println(maxx);
+```
