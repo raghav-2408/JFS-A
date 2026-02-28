@@ -60,3 +60,35 @@ public static Consumer<Double> applyFinalSalary(Employee e) {
     return result;
 }
 ```
+
+```java
+import java.util.Comparator;
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.stream.Stream;
+
+public class CartonUtility {
+	private List<Carton> cartonList;
+	
+	//FILL THE CODE HERE 
+	public List<Carton> getCartonList () {
+		return cartonList;
+	}
+	
+	public void setCartonList (List<Carton> list) {
+		this.cartonList = list;
+	}
+	
+	public Stream<Carton> convertToStream() {
+		
+		Stream<Carton> s = cartonList.stream();
+		return s;
+	}
+
+	public Carton findMax(Stream<Carton> stream1) {
+		
+		return stream1.max(Comparator.comparingInt(Carton :: getQuantity))
+					.orElseThrow (() -> new NoSuchElementException("No Cartons available"));			
+	}
+}
+```
